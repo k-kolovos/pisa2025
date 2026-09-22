@@ -1180,9 +1180,9 @@ act("Ποιοι φτάνουν ψηλά και γιατί","Από τον ορι
   DOM.forEach(function(k,pi){
     var x0=PX(pi), PW=PWS[pi], X=function(j){return x0+8+j*(PW-16)/3;};
     if(pi===DOM.length-1){
-      s.appendChild(tx(W-8,PT-34,"Επίλυση",{fill:"var(--ink)","font-size":11.5,"font-weight":640,"text-anchor":"end"}));
-      s.appendChild(tx(W-8,PT-21,"προβλημάτων",{fill:"var(--ink)","font-size":11.5,"font-weight":640,"text-anchor":"end"}));
-    } else s.appendChild(tx(x0,PT-22,k,{fill:"var(--ink)","font-size":11.5,"font-weight":640}));
+      s.appendChild(tx(x0+PW/2,PT-34,"Επίλυση",{fill:"var(--ink)","font-size":13,"font-weight":640,"text-anchor":"middle"}));
+      s.appendChild(tx(x0+PW/2,PT-21,"προβλημάτων",{fill:"var(--ink)","font-size":13,"font-weight":640,"text-anchor":"middle"}));
+    } else s.appendChild(tx(x0+PW/2,PT-22,k,{fill:"var(--ink)","font-size":13,"font-weight":640,"text-anchor":"middle"}));
     YRS.forEach(function(yr,j){
       if(TRG[k].g[j]===null) return;
       s.appendChild(tx(X(j),PB+18,yr.slice(2),{fill:"var(--muted)","font-size":10,"text-anchor":"middle"}));});
